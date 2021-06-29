@@ -1,21 +1,30 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.scss';
+import styled from 'styled-components';
+import Tagline from '@components/Tagline';
+import SocialIconBar from '@components/SocialIconBar';
+
+const StyledHeading = styled.h1`
+  font-size: 8rem;
+  font-weight: normal;
+  font-family: 'Komoda';
+  margin-bottom: -10px;
+`;
+
+const ContentDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>lemokami's Nextjs Starter</title>
-        <link rel='icon' href='/favicon.png' />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to lemokami's <a href='https://nextjs.org'>Next.js!</a>{' '}
-          Starter
-        </h1>
-        <a href='https://github.com/lemokami/nextjs-starter'>Github</a>
-      </main>
-    </div>
+    <ContentDiv>
+      <div>
+        <StyledHeading>HI I am LEMOKAMI</StyledHeading>
+        <Tagline>Student | Developer | Mentor</Tagline>
+        <SocialIconBar />
+      </div>
+    </ContentDiv>
   );
 }
