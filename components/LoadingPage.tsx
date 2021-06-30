@@ -4,10 +4,12 @@ import styled from 'styled-components';
 const icon = {
   hidden: {
     pathLength: 0,
+    opacity: 0,
     fill: 'rgba(0,0,0,0)',
   },
   show: {
     pathLength: 1,
+    opacity: 1,
     fill: 'rgba(0,0,0,1)',
     transition: {
       duration: 2,
