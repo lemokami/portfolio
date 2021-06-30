@@ -5,8 +5,18 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel='preload' href='/fonts/Komoda.woff2' as='font' />
-          <link rel='preload' href='/fonts/RobotoSlab.woff' as='font' />
+          <link
+            rel='preload'
+            href='/fonts/Komoda.woff2'
+            as='font'
+            crossOrigin='anonymous'
+          />
+          <link
+            rel='preload'
+            href='/fonts/RobotoSlab.woff'
+            as='font'
+            crossOrigin='anonymous'
+          />
         </Head>
         <body>
           <Main />

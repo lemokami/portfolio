@@ -30,11 +30,7 @@ export default function Home() {
 
   return (
     <AnimatePresence exitBeforeEnter>
-      {isLoading ? (
-        <motion.div layout key='loader'>
-          <LoadingPage setLoading={setIsLoading} />
-        </motion.div>
-      ) : (
+      {!isLoading ? (
         <ContentDiv
           initial={{
             opacity: 0,
@@ -58,6 +54,10 @@ export default function Home() {
             <SocialIconBar />
           </motion.div>
         </ContentDiv>
+      ) : (
+        <motion.div layout key='loader'>
+          <LoadingPage setLoading={setIsLoading} />
+        </motion.div>
       )}
     </AnimatePresence>
   );
