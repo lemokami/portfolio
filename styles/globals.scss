@@ -8,21 +8,23 @@
   font-family: 'Komoda';
   src: url('/fonts/Komoda.otf') format('otf');
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'RobotoSlab';
   src: url('/fonts/RobotoSlab.woff') format('woff');
+  font-display: swap;
 }
 
-body {
-  cursor: url('/cursor.svg'), auto;
-}
+// body {
+//   cursor: url('/cursor.svg'), auto;
+// }
 
 a {
   text-decoration: none;
   color: inherit;
-  cursor: none;
+  cursor: auto;
 }
 
 svg {

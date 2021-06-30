@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-const StyledTagline = styled.div`
+const StyledTagline = styled(motion.div)`
   font-family: 'RobotoSlab';
   text-transform: uppercase;
   width: 100%;
@@ -11,7 +12,15 @@ const StyledTagline = styled.div`
 `;
 
 const Tagline = ({ children }: { children: string }) => (
-  <StyledTagline>
+  <StyledTagline
+    initial={{ opacity: 0 }}
+    animate={{
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: 'easeOut',
+      },
+    }}>
     {children.split('').map((letter, index) => (
       <span key={index}>{letter}</span>
     ))}

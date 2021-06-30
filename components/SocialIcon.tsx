@@ -14,8 +14,15 @@ const StyledSocialIcon = styled.a`
   display: flex;
   align-items: center;
   border: 2px solid transparent;
+  transition: border 0.5s ease;
   &:hover {
     border-color: #000;
+  }
+
+  @media screen and (max-width: 640px) {
+    &:hover {
+      border-color: transparent;
+    }
   }
 `;
 
