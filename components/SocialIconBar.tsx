@@ -19,7 +19,10 @@ const SocialIconBar = () => {
   return (
     <StyledSocialIconBar>
       {SocialData.map((socialItem) => (
-        <SocialIcon url={socialItem.url} key={socialItem.name}>
+        <SocialIcon
+          url={socialItem.url}
+          key={socialItem.name}
+          name={socialItem.name}>
           {socialItem.icon}
         </SocialIcon>
       ))}

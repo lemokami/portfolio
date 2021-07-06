@@ -3,6 +3,7 @@ import styled from 'styled-components';
 type SocialIconType = {
   url: string;
   children: React.ReactNode;
+  name: string;
 };
 
 const StyledSocialIcon = styled.a`
@@ -32,8 +33,12 @@ const StyledSocialIcon = styled.a`
   }
 `;
 
-const SocialIcon: React.FC<SocialIconType> = ({ url, children }) => {
-  return <StyledSocialIcon href={url}>{children}</StyledSocialIcon>;
+const SocialIcon: React.FC<SocialIconType> = ({ url, children, name }) => {
+  return (
+    <StyledSocialIcon href={url} aria-label={name}>
+      {children}
+    </StyledSocialIcon>
+  );
 };
 
 export default SocialIcon;
