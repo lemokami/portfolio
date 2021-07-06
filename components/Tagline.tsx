@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 const StyledTagline = styled(motion.div)`
+  color: ${(props) => props.theme.text};
   font-family: 'RobotoSlab';
   text-transform: uppercase;
   width: 100%;

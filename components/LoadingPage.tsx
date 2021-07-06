@@ -5,12 +5,10 @@ const icon = {
   hidden: {
     pathLength: 0,
     opacity: 0,
-    fill: 'rgba(0,0,0,0)',
   },
   show: {
     pathLength: 1,
     opacity: 1,
-    fill: 'rgba(0,0,0,1)',
     transition: {
       duration: 2,
     },
@@ -20,7 +18,7 @@ const icon = {
 const StyledContainer = styled(motion.div)`
   height: 100vh;
   overflow-x: hidden;
-  background: #fafafa;
+  background: ${(props) => props.theme.background};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,6 +27,7 @@ const StyledContainer = styled(motion.div)`
 const StyledName = styled(motion.svg)`
   width: 20rem;
   height: auto;
+  color: ${(props) => props.theme.text};
 
   @media screen and (max-width: 640px) {
     width: 16rem;
@@ -42,7 +41,8 @@ const LoadingPage = ({ setLoading }) => (
       animate='show'
       onAnimationComplete={() => setLoading(false)}
       viewBox='0 0 238 108'
-      stroke='black'
+      stroke='currentColor'
+      fill='currentColor'
       xmlns='http://www.w3.org/2000/svg'>
       <motion.path
         variants={icon}

@@ -10,6 +10,7 @@ const StyledHeading = styled(motion.h1)`
   font-weight: normal;
   font-family: 'Komoda';
   margin-bottom: -10px;
+  color: ${(props) => props.theme.text};
 
   @media screen and (max-width: 640px) {
     font-size: 6rem;
@@ -22,7 +23,7 @@ const ContentDiv = styled(motion.div)`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #fafafa;
+  background: ${(props) => props.theme.background};
 `;
 
 export default function Home() {
