@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
-import Tagline from '@components/Tagline';
-import SocialIconBar from '@components/SocialIconBar';
-import LoadingPage from '@components/LoadingPage';
+import Tagline from '@components/Tagline/Tagline';
+import SocialIconBar from '@components/SocialIconBar/SocialIconBar';
 
 const StyledHeading = styled(motion.h1)`
   font-size: 8rem;
@@ -27,39 +25,31 @@ const ContentDiv = styled(motion.div)`
 `;
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
     <AnimatePresence exitBeforeEnter>
-      {!isLoading ? (
-        <ContentDiv
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}>
-          <motion.div>
-            <StyledHeading
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                transition: {
-                  duration: 1,
-                  ease: 'easeOut',
-                },
-              }}>
-              HI I am LEMOKAMI
-            </StyledHeading>
-            <Tagline>Student | Developer | Mentor</Tagline>
-            <SocialIconBar />
-          </motion.div>
-        </ContentDiv>
-      ) : (
-        <motion.div layout key='loader'>
-          <LoadingPage setLoading={setIsLoading} />
+      <ContentDiv
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}>
+        <motion.div>
+          <StyledHeading
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: {
+                duration: 1,
+                ease: 'easeOut',
+              },
+            }}>
+            HI I am LEMOKAMI
+          </StyledHeading>
+          <Tagline>Student | Developer | Mentor</Tagline>
+          <SocialIconBar />
         </motion.div>
-      )}
+      </ContentDiv>
     </AnimatePresence>
   );
 }

@@ -5,6 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          {/* preloading fonts  */}
           <link
             rel='preload'
             href='/fonts/Komoda.woff2'
@@ -15,6 +16,19 @@ class MyDocument extends Document {
             rel='preload'
             href='/fonts/RobotoSlab.woff'
             as='font'
+            crossOrigin='anonymous'
+          />
+          {/* preloading audio effects */}
+          <link
+            rel='preload'
+            href='/sounds/click.wav'
+            as='sound'
+            crossOrigin='anonymous'
+          />
+          <link
+            rel='preload'
+            href='/sounds/switch.wav'
+            as='sound'
             crossOrigin='anonymous'
           />
         </Head>

@@ -1,19 +1,11 @@
-import styled from 'styled-components';
-import SocialIcon from '@components/SocialIcon';
+import SocialIcon from '@components/SocialIcon/SocialIcon';
+import { StyledSocialIconBar } from './SocialIconBar.styles';
 import {
   TwitterIcon,
   GithubIcon,
   EmailIcon,
   LinkedInIcon,
 } from '@icons/SocialIcons';
-
-const StyledSocialIconBar = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
-  gap: 1.5rem;
-`;
 
 const SocialIconBar = () => {
   return (

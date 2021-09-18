@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-type SocialIconType = {
+export type SocialIconType = {
   url: string;
   children: React.ReactNode;
   name: string;
 };
 
-const StyledSocialIcon = styled.a`
+export const StyledSocialIcon = styled.a`
   color: ${(props) => props.theme.text};
   width: 3rem;
   height: 3rem;
@@ -14,6 +14,7 @@ const StyledSocialIcon = styled.a`
   display: flex;
   align-items: center;
   border: 2px dashed transparent;
+  cursor: pointer;
 
   &:hover {
     transition: border 0.5s ease;
@@ -32,13 +33,3 @@ const StyledSocialIcon = styled.a`
     }
   }
 `;
-
-const SocialIcon: React.FC<SocialIconType> = ({ url, children, name }) => {
-  return (
-    <StyledSocialIcon href={url} aria-label={name}>
-      {children}
-    </StyledSocialIcon>
-  );
-};
-
-export default SocialIcon;
